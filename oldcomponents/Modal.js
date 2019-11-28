@@ -2,25 +2,6 @@ import React from 'react';
 import { useTransition, a, config } from 'react-spring';
 
 export const Modal = ({ children, onOutClick, show }) => {
-  // const showButtonTransition = useTransition(show, null, {
-  //   from: {
-  //     transform: `scale(0.5)`,
-  //     opacity: 0
-  //   },
-  //   enter: {
-  //     transform: `scale(1)`,
-  //     opacity: 1
-  //   },
-  //   leave: {
-  //     transform: `scale(0.5)`,
-  //     opacity: 0
-  //   },
-  //   config: {
-  //     ...config.wobbly,
-  //     tension: 140
-  //   }
-  // });
-
   const showBackgroundTransition = useTransition(show, null, {
     from: {
       background: `rgba(0, 0, 0, ${0})`,
@@ -31,7 +12,6 @@ export const Modal = ({ children, onOutClick, show }) => {
       await next({ background: `rgba(0, 0, 0, ${0.4})` });
       await next({ transform: `translate3d(0, ${0}, 0)`, opacity: 1 });
     },
-
     leave: item => async (next, cancel) => {
       await next({ background: `rgba(0, 0, 0, ${0})` });
       await next({ transform: `translate3d(0, ${-20}px, 0)`, opacity: 0 });

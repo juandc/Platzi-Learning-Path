@@ -10,11 +10,14 @@
   "dependencies": {
     "@zeit/next-css": "^1.0.1",
     "html2canvas": "^1.0.0-rc.5",
+    "lodash-es": "^4.17.15",
+    "lodash-move": "^1.1.1",
     "next": "9.1.2",
     "react": "16.11.0",
     "react-dom": "16.11.0",
     "react-icons": "^3.8.0",
     "react-spring": "^8.0.27",
+    "react-use-gesture": "^6.0.14",
     "react-use-measure": "^2.0.0"
   },
   "devDependencies": {
